@@ -25,19 +25,7 @@ pipeline {
                 }
             }
         }
-        stage('Run Jar') {
-            steps {
-                script {
-                    // Exécuter le JAR généré
-                    sh 'java -jar target/*.jar'
-                }
-            }
-        }
-        stage('Archive Artifact') {
-            steps {
-                // Archiver le JAR dans Jenkins
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-            }
-        }
+       
+       
     }
 }
