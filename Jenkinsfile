@@ -2,7 +2,7 @@ pipeline {
 agent {
 docker {
 // Image contenant Maven et Git
-image 'my-maven-git:latest'
+ image 'maven:3.9.6-eclipse-temurin-17'
 // Pour réutiliser le cache Maven local entre builds
 args '-v $HOME/.m2:/root/.m2'
 }

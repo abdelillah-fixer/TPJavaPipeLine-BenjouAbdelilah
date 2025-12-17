@@ -74,3 +74,6 @@ Ce TP a permis de :
  installer plugins:![alt text](image-4.png)
  eter connecter sur jenkins ![alt text](image-5.png)
 ajouter une pipeline ![alt text](image-6.png)
+erreur 2 : ![alt text](image-7.png)
+build my jenkins blueocean ![alt text](image-8.png)
+![alt text](image-9.png)
