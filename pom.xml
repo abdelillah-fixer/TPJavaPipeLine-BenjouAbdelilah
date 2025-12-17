@@ -5,18 +5,21 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Identité du projet -->
     <groupId>com.abdelilah.tp</groupId>
     <artifactId>TPJavaPipeLine-BenjouAbdelilah</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <!-- Configuration Java -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <!-- Dépendances -->
     <dependencies>
-        <!-- Exemple : JUnit pour les tests -->
+        <!-- JUnit pour les tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -25,9 +28,10 @@
         </dependency>
     </dependencies>
 
+    <!-- Plugins -->
     <build>
         <plugins>
-            <!-- Plugin pour compiler et exécuter -->
+            <!-- Compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -37,6 +41,23 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+
+            <!-- Jar plugin pour rendre le .jar exécutable -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!-- ⚠️ Mets ici le package + classe exacte -->
+                            <mainClass>com.abdelilah.tp.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire plugin pour exécuter les tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
